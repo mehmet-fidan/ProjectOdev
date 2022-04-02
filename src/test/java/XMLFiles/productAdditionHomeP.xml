@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="All Test Suite">
+
+    <test verbose="2" preserve-order="true" name="AuthorizedProductAdditionHomPage">
+        <classes>
+            <class name="testPages.test02.TestClassAuthorized"/> <!-- ikinci testte ID null hatasi neden calistirmiyor -->
+        </classes>
+    </test>
+    <test name="UnAuthorized" verbose="2" preserve-order="true">
+        <classes>
+            <class name="testPages.test02.TestClassUnAuthorized"/>
+        </classes>
+    </test>
+
+</suite>

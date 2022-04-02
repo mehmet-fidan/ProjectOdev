@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"   name="productAddRemovePage">
+      <classes>
+          <class name="testPages.test03.ClassIpodNanoAuthorizedTest01"/>
+      </classes>
+    </test>
+    <test verbose="2" preserve-order="true"   name="productAddRemovePage2">
+        <classes>
+            <class name="testPages.test03.ClassIpodNanoAuthorizedTest02"/>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"   name="productAddRemovePage3">
+        <classes>
+            <class name="testPages.test03.ClassIpodNanoAuthorizedTest03"/>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"   name="productAddRemovePage5">
+        <classes>
+            <class name="testPages.test03.ChangeProductQuantityTest05"/>
+        </classes>
+    </test>
+
+</suite>
