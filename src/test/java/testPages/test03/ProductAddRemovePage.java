@@ -1,15 +1,14 @@
 package testPages.test03;
 
-import io.netty.handler.codec.compression.FastLzFrameEncoder;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import utils.ParentClass;
 
 import java.util.List;
 
-public class productAddRemovePage extends ParentClass {
+public class ProductAddRemovePage extends ParentClass {
 
     By lIpodNanoAddToCart = By.xpath("(//div//button//span[text()='Add to Cart'])[2]");
 

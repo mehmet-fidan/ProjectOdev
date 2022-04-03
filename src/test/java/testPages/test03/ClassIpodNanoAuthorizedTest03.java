@@ -6,32 +6,33 @@ import testPages.test01.LoginHomePage;
 import testPages.test02.ProductAdditionHomePage;
 import utils.Driver;
 
-public class ClassIpodNanoAuthorizedTest03 {
+public class ClassIpodNanoAuthorizedTest03 extends ProductAddRemovePage {
+
     WebDriver driver;
+
     LoginHomePage loginHomePage = new LoginHomePage();
-    productAddRemovePage productAddRemovePage = new productAddRemovePage();
     ProductAdditionHomePage additionHomePage = new ProductAdditionHomePage();
 
     @BeforeSuite
-    public void beforeTest() {
+    public void beforeSuite() {
         driver = Driver.getDriver();
     }
 
 
     @Test
     public void removeListFromCartTest3() {
-        loginHomePage.openPage();
+        gotoUrl();
         loginHomePage.loginPage();
         loginHomePage.login("ZeydinToprak@hotmail.com", "123456");
         additionHomePage.searchText("ipod");
         additionHomePage.randomProductSelection();
-        productAddRemovePage.removeListFromCart();
+        removeListFromCart();
         loginHomePage.logoutPage();
     }
 
 
     @AfterSuite
-    public void afterTest() {
+    public void afterSuite() {
         Driver.quitDriver();
     }
 

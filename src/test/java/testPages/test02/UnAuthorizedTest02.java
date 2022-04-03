@@ -6,11 +6,10 @@ import testPages.test01.LoginHomePage;
 import utils.Driver;
 
 
-public class TestClassUnAuthorized {
+public class UnAuthorizedTest02 extends ProductAdditionHomePage {
+
     WebDriver driver;
 
-    ProductAdditionHomePage additionHomePage = new ProductAdditionHomePage();
-    LoginHomePage loginHomePage = new LoginHomePage();
 
     @BeforeSuite
     public void beforeTest() {
@@ -19,10 +18,10 @@ public class TestClassUnAuthorized {
 
     @Test
     public void unAuthorizedPSTest() {
-        loginHomePage.openPage();
-        additionHomePage.searchText("ipod");
-        additionHomePage.randomProductSelection();
-       // additionHomePage.isProductInCart("1");
+        gotoUrl();
+        searchText("ipod");
+        randomProductSelection();
+        // isProductInCart("1");
     }
 
     @AfterSuite

@@ -12,6 +12,7 @@ public class ParentClass {
 
     protected static WebDriver driver;
     protected static WebDriverWait wait;
+    String url = "http://opencart.abstracta.us/";
 
     public ParentClass(){
         driver= Driver.getDriver();
@@ -19,7 +20,7 @@ public class ParentClass {
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
     }
 
-    public void gotoUrl(String url){
+    public void gotoUrl(){
         driver.get(url);
     }
 

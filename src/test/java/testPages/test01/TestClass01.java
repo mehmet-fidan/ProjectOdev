@@ -13,7 +13,7 @@ public class TestClass01 extends ParentClass {
 
     @Test(priority = -1)
     public void testLoginPage() {
-        loginHomePage.openPage();
+        gotoUrl();
         loginHomePage.loginPage();
     }
 

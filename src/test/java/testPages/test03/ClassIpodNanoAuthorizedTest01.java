@@ -6,22 +6,23 @@ import testPages.test01.LoginHomePage;
 import testPages.test02.ProductAdditionHomePage;
 import utils.Driver;
 
-public class ClassIpodNanoAuthorizedTest01 {
+public class ClassIpodNanoAuthorizedTest01 extends ProductAddRemovePage {
+
     WebDriver driver;
+
     LoginHomePage loginHomePage = new LoginHomePage();
     ProductAdditionHomePage additionHomePage = new ProductAdditionHomePage();
-    productAddRemovePage productAddRemovePage = new productAddRemovePage();
 
     @BeforeSuite
-    public void beforeTest() {
+    public void beforeSuite() {
         driver = Driver.getDriver();
     }
 
     @Test
     public void authorizedIpodNanoAddTest1() {
-        loginHomePage.openPage();
+        gotoUrl();
         additionHomePage.searchText("ipod");
-        productAddRemovePage.addIpodNanoToCart();
+        addIpodNanoToCart();
         loginHomePage.loginPage();
         loginHomePage.login("ZeydinToprak@hotmail.com", "123456");
         loginHomePage.logout();
@@ -29,8 +30,8 @@ public class ClassIpodNanoAuthorizedTest01 {
 
 
     @AfterSuite
-    public void afterTest(){
-       Driver.quitDriver();
+    public void afterSuite() {
+        Driver.quitDriver();
     }
 
 }

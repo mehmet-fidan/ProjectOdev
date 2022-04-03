@@ -25,11 +25,6 @@ public class LoginHomePage extends ParentClass {
     By lLogOutText = By.xpath("(//a[text()='Logout'])[2]");
 
 
-
-    public void openPage(){
-        gotoUrl(url);
-    }
-
     public void loginPage() {
         clickTo(lMyAccount);
         clickTo(lLogin);

@@ -5,12 +5,12 @@
 
     <test verbose="2" preserve-order="true" name="AuthorizedProductAdditionHomPage">
         <classes>
-            <class name="testPages.test02.TestClassAuthorized"/> <!-- ikinci testte ID null hatasi neden calistirmiyor -->
+            <class name="testPages.test02.AuthorizedTest01"/> <!-- ikinci testte ID null hatasi neden calistirmiyor -->
         </classes>
     </test>
     <test name="UnAuthorized" verbose="2" preserve-order="true">
         <classes>
-            <class name="testPages.test02.TestClassUnAuthorized"/>
+            <class name="testPages.test02.UnAuthorizedTest02"/>
         </classes>
     </test>
 

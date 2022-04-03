@@ -5,11 +5,10 @@ import org.testng.annotations.*;
 import testPages.test01.LoginHomePage;
 import utils.Driver;
 
-public class TestClassAuthorized {
+public class AuthorizedTest01 extends ProductAdditionHomePage {
 
     WebDriver driver;
     LoginHomePage loginHomePage = new LoginHomePage();
-    ProductAdditionHomePage additionHomePage = new ProductAdditionHomePage();
 
 
     @BeforeSuite
@@ -19,12 +18,12 @@ public class TestClassAuthorized {
 
     @Test
     public void authorizedPSTest() {
-        loginHomePage.openPage();
+        gotoUrl();
         loginHomePage.loginPage();
         loginHomePage.login("ZeydinToprak@hotmail.com", "123456");
-        additionHomePage.searchText("ipod");
-        additionHomePage.randomProductSelection();
-      //  additionHomePage.isProductInCart("1");
+        searchText("ipod");
+        randomProductSelection();
+        //  isProductInCart("1");
     }
 
     @AfterSuite
