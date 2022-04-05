@@ -1,7 +1,6 @@
 package testPages.test11;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
@@ -31,12 +30,10 @@ public class AddressInfoAdditionTest extends AddressInfoAdditionPage {
 
         addNewAddress.put("First Name", "Zeydin");
         addNewAddress.put("Last Name", "Toprak");
-
         addNewAddress.put("Address 1", "Alabama");
         addNewAddress.put("City", "UCla");
         addNewAddress.put("Post Code", "2323");
         addNewAddress.put("Country", "United States");
-
         addNewAddress.put("Region / State", "Alabama");
         addNewAddress.put("Default Address", "1");
 

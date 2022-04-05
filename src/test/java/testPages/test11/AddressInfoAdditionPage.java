@@ -2,9 +2,7 @@ package testPages.test11;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 import testPages.test01.LoginHomePage;
 import utils.ParentClass;
 
@@ -33,7 +31,6 @@ public class AddressInfoAdditionPage extends ParentClass {
     }
 
     public void myAddressDetails (Map<String, String> addressBook){
-        String textControl = "successfully";
         clickTo(lAddressBook);
         clickTo(lNewAddress);
         sendKeysTo(lFirstName,addressBook.get("First Name"));
@@ -45,6 +42,7 @@ public class AddressInfoAdditionPage extends ParentClass {
         WebElement countryElement = driver.findElement(lCountry);
         Select country= new Select(countryElement);
         country.selectByVisibleText(addressBook.get("Country"));
+
         WebElement zoneElement = driver.findElement(lZone);
         Select region= new Select(zoneElement);
         sleep(1000);
