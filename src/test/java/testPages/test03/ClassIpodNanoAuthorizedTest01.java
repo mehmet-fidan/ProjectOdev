@@ -24,7 +24,7 @@ public class ClassIpodNanoAuthorizedTest01 extends ProductAddRemovePage {
         additionHomePage.searchText("ipod");
         addIpodNanoToCart();
         loginHomePage.loginPage();
-        loginHomePage.login("ZeydinToprak@hotmail.com", "123456");
+        loginHomePage.login();
         loginHomePage.logout();
     }
 

@@ -29,7 +29,7 @@ public class PNamesAndPricesTest01 extends ProductNAndPHomePage {
     public void testProductNAndPAddedCart() {
         gotoUrl();
         loginHomePage.loginPage();
-        loginHomePage.login("ZeydinToprak@Hotmail.com", "123456");
+        loginHomePage.login();
         additionHomePage.searchText("mac" + Keys.ENTER);
         addMultipleProductsToCart();
         getProductsNameAndPrice();

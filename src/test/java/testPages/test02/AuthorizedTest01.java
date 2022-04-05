@@ -20,7 +20,7 @@ public class AuthorizedTest01 extends ProductAdditionHomePage {
     public void authorizedPSTest() {
         gotoUrl();
         loginHomePage.loginPage();
-        loginHomePage.login("ZeydinToprak@hotmail.com", "123456");
+        loginHomePage.login();
         searchText("ipod");
         randomProductSelection();
         //  isProductInCart("1");

@@ -23,7 +23,7 @@ public class ChangeProductQuantityTest05 extends ProductAddRemovePage{
     public void changeQuantityOfProductTest5() {
         gotoUrl();
         loginHomePage.loginPage();
-        loginHomePage.login("ZeydinToprak@hotmail.com", "123456");
+        loginHomePage.login();
         additionHomePage.searchText("ipod");
         additionHomePage.randomProductSelection();
         changeQuantityInCart(1);

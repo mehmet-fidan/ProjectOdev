@@ -1,33 +1,31 @@
-package testPages.test03;
+package testPages.test05;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.*;
-import testPages.test01.LoginHomePage;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+
+import org.testng.annotations.Test;
 import testPages.test02.ProductAdditionHomePage;
 import utils.Driver;
 
-public class ClassIpodNanoAuthorizedTest02 extends ProductAddRemovePage {
+public class CheckOutTest extends NonAuthorizedCheckOut {
+
+    //7.    Yetkisiz bir kullanici olarak ürün checkout yapamamaliyim.
 
     WebDriver driver;
 
-    LoginHomePage loginHomePage = new LoginHomePage();
     ProductAdditionHomePage additionHomePage = new ProductAdditionHomePage();
-
 
     @BeforeSuite
     public void beforeSuite() {
         driver = Driver.getDriver();
     }
 
-
     @Test
-    public void authorizedIpodNanoAddTest2() {
+    public void testCheckOut(){
         gotoUrl();
-        loginHomePage.loginPage();
-        loginHomePage.login();
         additionHomePage.searchText("ipod");
-        addFiveIpodNanoToCart(4);
-        loginHomePage.logoutPage();
+
     }
 
 
@@ -35,5 +33,4 @@ public class ClassIpodNanoAuthorizedTest02 extends ProductAddRemovePage {
     public void afterSuite() {
         Driver.quitDriver();
     }
-
 }

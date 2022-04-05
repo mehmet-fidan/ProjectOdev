@@ -36,9 +36,9 @@ public class LoginHomePage extends ParentClass {
 
     }
 
-    public void login(String email, String password){
-        sendKeysTo(lEmail, email);
-        sendKeysTo(lPassword, password);
+    public void login(){
+        sendKeysTo(lEmail, "ZeydinToprak@hotmail.com");
+        sendKeysTo(lPassword, "123456");
         clickTo(lLoginButton);
     }
     public void logout ( ){

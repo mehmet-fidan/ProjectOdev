@@ -23,7 +23,7 @@ public class ClassIpodNanoAuthorizedTest03 extends ProductAddRemovePage {
     public void removeListFromCartTest3() {
         gotoUrl();
         loginHomePage.loginPage();
-        loginHomePage.login("ZeydinToprak@hotmail.com", "123456");
+        loginHomePage.login();
         additionHomePage.searchText("ipod");
         additionHomePage.randomProductSelection();
         removeListFromCart();
